@@ -9,7 +9,7 @@ const Theme = () => {
     e.preventDefault();
     console.log("submit");
     const filter = searchFilter;
-    const tours =  await fetch(`https://trvavel-recommendation-krishnavpai9-gmailcom.vercel.app/api/getTours`, {
+    const tours =  await fetch(`/api/getTours`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
