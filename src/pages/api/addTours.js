@@ -1,4 +1,4 @@
-import Tour from "../../models/AllTours";
+import Tour from "../../models/DetailedTour";
 import dbConnect from "../../middleware/mongoose";
 
 const handler = async (req, res) => {
@@ -14,6 +14,8 @@ const handler = async (req, res) => {
                 days:   tdays,
                 titleLink: req.body[i].titleLink,
                 imageLink: req.body[i].imageLink,
+                itinerary: req.body[i].itinerary,
+                themes: req.body[i].themes
             });
             await tour.save();
         }

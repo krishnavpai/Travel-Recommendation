@@ -1,11 +1,18 @@
-import AllTours from "../../models/AllTours";
+import DetailedTour from "../../models/DetailedTour";
 import connectDB from "../../middleware/mongoose";
 
 const handler = async (req, res) => {
   if (req.method === "POST") {
-    let destination = req.body.destination;
-    const tours = await AllTours.find({ $text: { $search: destination } });
+    let filter = req.body.filter;
+    if(filter != "") {
+    const tours = await DetailedTour.find({ $text: { $search: filter } });
+      return res.json(tours);
+  }
+    else {
+      const tours = await DetailedTour.find();
+    
     res.json(tours);
+    }
   } else {
     res.json({ error: "Bad request" });
   }
