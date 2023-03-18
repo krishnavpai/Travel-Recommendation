@@ -23,6 +23,37 @@ const Theme = () => {
     console.log(tour);
   };
 
+
+  const tags = [
+  'Adventure',
+'Art & Culture',
+'Backwaters',
+'Beach',
+'Package',
+'Camping',
+'Couple',
+'Cultural & Heritage',
+'Exotic',
+'Family',
+'Family & Kids',
+'Fort And Palaces',
+'Hill Station',
+'Honeymoon',
+'Lakes',
+'Luxury',
+'Mountain',
+'Nature' ,
+'Religious',
+'Romantic',
+'Shopping',
+'Sightseeing',
+'Student',
+'Summer',
+'Trekking',
+'Wildlife',
+'Winter'
+  ];
+
   return (
     <div className="mx-10 my-4 bg-white rounded-md">
       <form className="px-4 py-2" onSubmit={handleSubmit} method= "POST">
@@ -68,6 +99,8 @@ const Theme = () => {
           </button>
         </div>
       </form>
+      
+
 
       <section className="text-blue-600 body-font">
         <div className="container px-5 py-24 mx-auto">
