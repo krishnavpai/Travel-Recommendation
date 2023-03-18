@@ -106,7 +106,7 @@ const Theme = () => {
         <div className="container px-5 py-24 mx-auto">
           <div className="flex flex-wrap -m-4">
           {tours.map((tours) => (
-            <div className="p-4 md:w-1/3">
+            <div className="p-4 md:w-1/3" key= {tours.id}>
               <div className="h-full border-2 border-blue-200 border-opacity-60 rounded-lg overflow-hidden">
                 <img
                   className="lg:h-48 md:h-36 w-full object-cover object-center"
