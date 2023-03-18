@@ -1,4 +1,5 @@
 import { useState } from "react";
+import fetch from "isomorphic-unfetch";
 const Theme = () => {
   const[tours, setTours] = useState([]);
   const[searchFilter, setSearchFilter] = useState("");
@@ -8,7 +9,7 @@ const Theme = () => {
     e.preventDefault();
     console.log("submit");
     const filter = searchFilter;
-    const tours =  await fetch("/api/getTours", {
+    const tours =  await fetch(`https://trvavel-recommendation-krishnavpai9-gmailcom.vercel.app/api/getTours`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
